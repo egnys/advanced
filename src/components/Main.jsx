@@ -4,14 +4,15 @@ import "./Main.css"
 import settings from '../images/Gear.png'
 import notification from "../images/Notifications icon.png"
 import search from "../images/Search.png";
-
+import advert from "../images/advert.png";
+import payment from "../images/payment.png";
 // const containerStyle = {
 //     width: '100%',
 //     height: '100%'
 // };
 
 
-const Main = () => {
+const Main = (props) => {
     //
     // const mapRef = useRef(undefined)
     // const onLoad = React.useCallback(function callback(map) {
@@ -49,8 +50,10 @@ const Main = () => {
 
         <div className="container">
             <div className="buttons">
-                <button className='settings mr-8'><img src={settings} alt=""/></button>
-                <button className='notifications'><img src={notification} alt=""/></button>
+                <button className='settings mr-8' onClick={() => props.setOpen(true)}><img src={settings} alt=""/></button>
+                <button className='notifications' onClick={() => props.setNotifOpen(true)}><img src={notification} alt=""/></button>
+                <button className='advertising' onClick={() => props.setAdvertOpen(true)}><img src={settings} alt=""/></button>
+                <button className='payment' onClick={() => props.setPaymentOpen(true)}><img src={payment} alt=""/></button>
             </div>
             <div className="search">
                 <div className="search_input">

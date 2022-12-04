@@ -114,7 +114,7 @@
 #checkboxes label:hover, #checkboxes2 label:hover {
     background-color: #FFBE14;
 }
-input[type="checkbox"] {
+.option input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     color: white;
